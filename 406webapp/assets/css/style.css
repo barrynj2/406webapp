@@ -5,7 +5,7 @@ body{
     line-height: 28px;
     font-weight: 300;
     font-size: 14px;
-    color:#41bbf4;
+    color:#000;
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-overflow-scrolling: touch;
@@ -33,7 +33,22 @@ a:hover {
     color: #333333;
     text-decoration: none;
 }
+div.show-image {
+    position: relative;
+    float:left;
+    margin:5px;}
 
+div.show-image:hover input
+  {
+  display: block;
+  }
+
+div.show-image input {
+    position:absolute;
+    display:none;
+    top: 100px;
+    left: 100px;
+}
 
 /* Transition elsements
 -------------------------------------------------------- */
@@ -210,7 +225,7 @@ h6 {
     background-color: #4aa0c2;
     border-color: #4aa0c2;
     color: #41bbf4;
-    background-color: #t;
+    background-color: #fff;
     border-color: #fff;
 }
 
@@ -242,10 +257,6 @@ ul, ol {
     list-style : none
 }
 
-
-ul.list-check {
-    
-}
 
 ul.list-check li{
     position: relative;
@@ -1247,10 +1258,6 @@ Resume Timeline
     margin: 0;
 }
 
-/* === Blog Section === */
-.latest-blog-section {
-  
-}
 .blog-post-wrapper {
     padding: 4px;
     border: 1px solid #eee;
@@ -1308,9 +1315,7 @@ Resume Timeline
 .entry-header {
     padding: 0 12px;
 }
-.post-meta {
 
-}
 .the-category a {
     font-size: 12px;
     line-height: 28px;
@@ -1409,11 +1414,6 @@ Icon for all respective meta
     padding: 9px 54px;
 }
 
-
-/* === Contact Section === */
-.contact-section  {
-  
-}
 
 .contact-section strong {
     display: block;

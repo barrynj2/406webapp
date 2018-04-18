@@ -79,6 +79,7 @@
   </div>
 </nav>
 <!--end navbar-->  
+<<<<<<< HEAD
 
 
 
@@ -205,3 +206,134 @@
  </svg>
 </body>
 </html>
+=======
+
+
+
+
+
+
+<br/>
+<!--left section-->
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <!--stair/elevator radio-->
+<div class="btn-group" data-toggle="buttons">
+    <h3>Stairs or Elevator?</h3>
+      <label class="btn btn-default active form-check-label">
+        <input class="form-check-input" type="radio" autocomplete="off" > Stairs
+      </label>
+
+      <label class="btn btn-default form-check-label">
+        <input class="form-check-input" type="radio" autocomplete="off"> Elevator
+      </label>
+</div>
+<!--end radio-->
+    </div>
+<!--end left section-->
+    <div class="col-sm-8 text-center"> 
+
+
+<!--form-->
+<script type="text/javascript">
+ function getRoute() {
+	var imagePath = "assets/images/"
+	var startingPoint = document.getElementById("start").value;
+	var destination = document.getElementById("end").value;
+	var start = startingPoint.concat("_");
+	
+	var navigationOption = document.getElementById("access").value;
+	if (navigationOption = "elevator"){
+		imagePath = imagePath.concat("elevator/");
+	} else {
+		imagePath = imagePath.concat("stairs/");
+	}
+	var pictureName = start.concat(destination);
+  var imagePath = imagePath.concat(pictureName);
+	document.getElementById('floor1').src = imagePath +".png" ;
+
+
+	}
+  
+
+
+</script>
+<p id = "test"></p>
+<form>
+  Starting Location:<br>
+  <select name="start" id="start">
+      <option value="Taylor">Taylor Auditorium (Floor 1)</option>
+      <option value="Taylor2">Taylor Auditorium (Floor 2)</option> 
+    <option value="Front" selected>Front Door</option>
+    <option value="Side">Side Door</option>
+  </select> <br/>
+  Ending Location:<br>
+  <select name="end" id="end">
+    <option value="Taylor"selected >Taylor Auditorium (Floor 1)</option>
+    <option value="Taylor2">Taylor Auditorium (Floor 2)</option>
+    <option value="Dividends">Dividends</option>
+    <option value="Front">Front Door</option>
+    <option value="Side">Side Door</option>
+  </select> <br/>
+  <select name="stairs" id="access">
+      <option value="stairs" >Stairs</option>
+      <option value="elevator">Elevator</option>
+    </select> <br/>
+<input type="submit" value="Submit"  onclick='getRoute(); return false;'/>
+</form>
+<!--form-->
+<br/>
+
+<!--search by room-->
+<form class="form-inline" action="">
+  <div class="form-group">
+  <label for="search">Search By Room:</label>
+  <input type="text" class="form-control" id="search" placeholder="Enter room number..." name="search">
+  </div>
+  </form>
+<!--end search bar-->
+
+
+<br/>
+<br/>
+<!--map-->
+<div>
+    <!--floor 1-->
+    <img id ="floor1" src="assets/images/fsb1.png" style="height:auto; width:60%;">
+</div>
+
+<div>
+    <!--floor 2-->
+    <img id="floor2" src="assets/images/fsb2.png" style="height:auto; width:80%;">
+    </div>
+<!--end map-->
+<br/>
+<br/>
+
+</div>
+<!--end main section-->
+
+<!--right section-->
+    <div class="col-sm-2 sidenav">
+      <h2> Entering from the Side Door?</h2>
+      <div class="well">
+        <p> Take me to Taylor Auditorium!</p>
+          <button onclick="document.getElementById('floor1').src='assets/images/side_taylor.png'">Go!</button>
+      </div>
+      <div class="well">
+          <button onclick="document.getElementById('floor1').src='assets/images/fsb2.png'">floor2</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end right section-->
+
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
+>>>>>>> origin/master
