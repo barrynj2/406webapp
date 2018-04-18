@@ -21,6 +21,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="assets/js/printRoute.js"></script>
+	<script>
+	function getRoute() {
+	var imagePath = "/assets/images/"
+	var startingPoint = document.getElementById("start").value;
+	var destination = document.getElementById("end").value;
+	var start = startingPoint.concat("_");
+	
+	var navigationOption = document.getElementById("accessibility").value;
+	if (navigationOption = "elevator"){
+		imagePath = imagePath.concat("elevator/");
+	} else {
+		imagePath = imagePath.concat("stairs/");
+	}
+	var pictureName = start.concat(destination);
+	document.getElementById('floor1').src = imagePath + pictureName +".png" + new Date().getTime();
+	}
+	}
+		</script>
     <style>
     /* Remove the navbar&#39;s default margin-bottom and rounded borders */ 
     .navbar {
