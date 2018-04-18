@@ -21,26 +21,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="assets/js/printRoute.js"></script>
-	<script>
-	function getRoute() {
-	var imagePath = "/assets/images/"
-	var startingPoint = document.getElementById("start").value;
-	var destination = document.getElementById("end").value;
-	var start = startingPoint.concat("_");
-	
-	var navigationOption = document.getElementById("accessibility").value;
-	if (navigationOption = "elevator"){
-		imagePath = imagePath.concat("elevator/");
-	} else {
-		imagePath = imagePath.concat("stairs/");
-	}
-	var pictureName = start.concat(destination);
-	document.getElementById('floor1').src = imagePath + pictureName +".png" + new Date().getTime();
-	}
-	}
-		</script>
     <style>
-    /* Remove the navbar&#39;s default margin-bottom and rounded borders */ 
+    /* Remove the navbar&amp;#39;s default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
@@ -63,7 +45,7 @@
       padding: 15px;
     }
     
-    /* On small screens, set height to &#39;auto&#39; for sidenav and grid */
+    /* On small screens, set height to &amp;#39;auto&amp;#39; for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
@@ -79,8 +61,8 @@
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"></button> 
-        <a class="navbar-brand" href="#">Logo</a></div>
+          <a class="navbar-brand" href="#">Logo</a>
+        </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active">
@@ -162,32 +144,31 @@
             <!--floor 1-->
             <img id="floor1" src="assets/images/fsb1.png" style="height:auto; width:60%;" />
           </div>
-          <div>
-            <!--floor 2
-    <img id="floor2" src="assets/images/fsb2.png" style="height:auto; width:80%;">
-    </div> -->
-            <!--end map-->
-            <br />
-            <br />
+          <!--<div>
+            floor 2
+            <img id="floor2" src="assets/images/fsb2.png" style="height:auto; width:80%;" />
+          </div> -->
+          <!--end map-->
+          <br />
+          <br />
+        </div>
+        <!--end main section-->
+        <!--right section-->
+        <div class="col-sm-2 sidenav">
+          <h2>Entering from the Side Door?</h2>
+          <div class="well">
+            <p>Take me to Taylor Auditorium!</p>
+            <button onclick="document.getElementById(&#39;floor1&#39;).src=&#39;assets/images/side_taylor.png&#39;">Go!</button>
           </div>
-          <!--end main section-->
-          <!--right section-->
-          <div class="col-sm-2 sidenav">
-            <h2>Entering from the Side Door?</h2>
-            <div class="well">
-              <p>Take me to Taylor Auditorium!</p>
-              <button onclick="document.getElementById(&#39;floor1&#39;).src=&#39;assets/images/side_taylor.png&#39;">Go!</button>
-            </div>
-            <div class="well">
-              <button onclick="document.getElementById(&#39;floor1&#39;).src=&#39;assets/images/fsb2.png&#39;">floor2</button>
-            </div>
+          <div class="well">
+            <button onclick="document.getElementById(&#39;floor1&#39;).src=&#39;assets/images/fsb2.png&#39;">floor2</button>
           </div>
         </div>
       </div>
-      <!--end right section-->
-      <footer class="container-fluid text-center">
-        <p>Footer Text</p>
-      </footer>
     </div>
+    <!--end right section-->
+    <footer class="container-fluid text-center">
+      <p>Footer Text</p>
+    </footer>
   </body>
 </html>
